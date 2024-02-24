@@ -20,6 +20,9 @@ int secondLargest(int* arr, int size){
 
     // will return the second largest element
     return secondLargest ;
+
+    // TC -> O(N) 
+    // SC -> O(1) 
 }
 int main(){
     int arr[10] = {1, 3, 6, 8, 12, 15, 19, 20, 32, 42} ;
