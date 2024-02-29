@@ -30,7 +30,7 @@ void quickSort(int* arr, int low, int high){
 
 int main(){
     int arr[10] = {4,6,2,5,7,9,1,3,0,8} ;
-    quickSort(arr,0,10) ;
+    quickSort(arr,0,9) ;
     for(int i=0 ; i<10 ; i++){
         cout << arr[i] <<" " ;
     }
