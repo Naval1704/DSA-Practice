@@ -51,6 +51,29 @@ void insertNode_atPosition(listNode* &head, int pos, int d){
     curr -> next = newNode ; 
 }
 
+void deleteNode_atPosition(listNode* &head, int pos){
+    if( pos == 1 ){
+        // delete head 
+        listNode* curr = head ;
+        head = head -> next ;
+        curr -> next = NULL ;
+        delete curr ;
+    }
+    else{
+        listNode* curr = head ;
+        listNode* temp = NULL ;
+        int cnt = 1 ;
+        while( cnt <= pos ){
+            temp = curr ;
+            curr = curr -> next ;
+            cnt++;
+        }
+        temp -> next = curr -> next ;
+        curr -> next = NULL ;
+        delete curr ;
+    }
+}
+
 void printlist(listNode* &head){
     listNode* temp = head ;
     while(temp != NULL){
@@ -66,13 +89,11 @@ int main(){
 
     insertNode_tail(tail, 1) ;
     insertNode_tail(tail, 2) ;
+    insertNode_tail(tail, 3) ;
+    insertNode_tail(tail, 4) ;
+    insertNode_tail(tail, 5) ;
 
-    insertNode_head(head, 6) ;
-    insertNode_head(head, 7) ;
-    
-    insertNode_atPosition(head, 3, 5) ;
-    insertNode_atPosition(head, 4, 4) ;
-
+    deleteNode_atPosition(head,2);
     printlist(head) ;
     return 0;
 }
