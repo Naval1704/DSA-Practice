@@ -1,0 +1,8 @@
+# Ignore Visual Studio Code settings folder
+.vscode/
+
+# Ignore .cph folder
+.cph/
+
+# Ignore files with .bin extension
+*.bin
