@@ -6,3 +6,6 @@
 
 # Ignore files with .bin extension
 *.bin
+
+# Ignore files with .exe extension
+*.exe
